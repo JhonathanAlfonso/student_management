@@ -38,6 +38,22 @@
                     <td th:text="${student.firstName}"></td>
                     <td th:text="${student.lastName}"></td>
                     <td th:text="${student.email}"></td>
+                    <td>
+                        <div>
+                            <a
+                                th:href="@{/students/edit/{id} (id=${student.id})}"
+                                class="btn btn-primary"
+                            >
+                                Edit
+                            </a>
+                            <a
+                                th:href="@{/students/{id} (id=${student.id})}"
+                                class="btn btn-danger"
+                            >
+                                Delete
+                            </a>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
